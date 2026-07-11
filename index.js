@@ -32,3 +32,12 @@ function getAgeInDays() {
   const ageInMilliseconds = today - birthDate;
   return Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24));
 }
+
+function getAgeInMonths() {
+  const today = new Date();
+  const birthDate = new Date(dob);
+  let ageInMonths = (today.getFullYear() - birthDate.getFullYear()) * 12;
+  ageInMonths -= birthDate.getMonth();
+  ageInMonths += today.getMonth();
+  return ageInMonths <= 0 ? 0 : ageInMonths;
+}
