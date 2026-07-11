@@ -52,3 +52,19 @@ function getAgeInYears() {
   }
   return age;
 }
+
+function isBirthdayYesterday() {
+  const today = new Date();
+  const yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1);
+  const birthDate = new Date(dob);
+  return yesterday.getMonth() === birthDate.getMonth() && yesterday.getDate() === birthDate.getDate();
+}
+
+function isBirthdayTomorrow() {
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
+  const birthDate = new Date(dob);
+  return tomorrow.getMonth() === birthDate.getMonth() && tomorrow.getDate() === birthDate.getDate();
+}
