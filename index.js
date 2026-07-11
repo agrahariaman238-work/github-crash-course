@@ -25,3 +25,4 @@ function isBirthdayInLeapYear() {
   const birthYear = birthDate.getFullYear();
   return (birthYear % 4 === 0 && birthYear % 100 !== 0) || (birthYear % 400 === 0);
 }
+
