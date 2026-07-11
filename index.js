@@ -10,14 +10,10 @@ function isAdult() {
   return age >= 18;
 }
 
-function getBirthYear() {
-  return new Date().getFullYear() - age;
-}
-
-function getAge() {
-  return age;
-}
-
 function getDOB() {
   return dob;
 } 
+
+function greet() {
+  console.log(`Hello, my name is ${name} and I am ${age} years old.`);
+}
