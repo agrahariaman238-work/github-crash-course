@@ -19,3 +19,9 @@ function isBirthdayToday() {
   const birthDate = new Date(dob);
   return today.getMonth() === birthDate.getMonth() && today.getDate() === birthDate.getDate();
 }
+
+function isBirthdayInLeapYear() {
+  const birthDate = new Date(dob);
+  const birthYear = birthDate.getFullYear();
+  return (birthYear % 4 === 0 && birthYear % 100 !== 0) || (birthYear % 400 === 0);
+}
