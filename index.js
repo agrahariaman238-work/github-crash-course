@@ -14,6 +14,8 @@ function getDOB() {
   return dob;
 } 
 
-function greet() {
-  console.log(`Hello, my name is ${name} and I am ${age} years old.`);
+function isBirthdayToday() {
+  const today = new Date();
+  const birthDate = new Date(dob);
+  return today.getMonth() === birthDate.getMonth() && today.getDate() === birthDate.getDate();
 }
