@@ -26,3 +26,9 @@ function isBirthdayInLeapYear() {
   return (birthYear % 4 === 0 && birthYear % 100 !== 0) || (birthYear % 400 === 0);
 }
 
+function getAgeInDays() {
+  const today = new Date();
+  const birthDate = new Date(dob);
+  const ageInMilliseconds = today - birthDate;
+  return Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24));
+}
