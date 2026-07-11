@@ -13,3 +13,11 @@ function isAdult() {
 function getBirthYear() {
   return new Date().getFullYear() - age;
 }
+
+function getAge() {
+  return age;
+}
+
+function getDOB() {
+  return dob;
+} 
