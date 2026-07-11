@@ -9,3 +9,7 @@ function sayName() {
 function isAdult() {
   return age >= 18;
 }
+
+function getBirthYear() {
+  return new Date().getFullYear() - age;
+}
